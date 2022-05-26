@@ -1,8 +1,8 @@
 name: 'Upstream Sync'
 
 on:
-  schedule:
-    - cron:  ${{ secrets.FORK_DEPLOY_SCHEDULE }}
+  # schedule:
+  # - cron:  ${{ secrets.FORK_DEPLOY_SCHEDULE }}
   workflow_dispatch:  # click the button on Github repo!
 
 jobs:
@@ -19,7 +19,7 @@ jobs:
       with:
         # optional: set the branch to checkout,
         # sync action checks out your 'target_sync_branch' anyway
-        ref:  my-branch
+        ref: production
         # REQUIRED if your upstream repo is private (see wiki)
         persist-credentials: false
 
