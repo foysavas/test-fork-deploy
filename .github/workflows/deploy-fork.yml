@@ -1,15 +1,15 @@
 name: 'Upstream Sync'
 
 on:
-  # schedule:
-  # - cron:  ${{ secrets.FORK_DEPLOY_SCHEDULE }}
   workflow_dispatch:  # click the button on Github repo!
 
 jobs:
   sync_latest_from_upstream:
     runs-on: ubuntu-latest
     name: Sync latest commits from upstream repo
-    # if: github.repository != 'possible-world/test-fork-deploy'
+    if: |
+      github.repository != 'possible-world/test-fork-deploy' &&
+      github.ref = 'refs/heads/production'
 
     steps:
     # REQUIRED step
