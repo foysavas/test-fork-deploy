@@ -9,7 +9,7 @@ jobs:
     name: Sync latest commits from upstream repo
     if: |
       github.repository != 'possible-world/test-fork-deploy' &&
-      github.ref = 'refs/heads/production'
+      github.ref == 'refs/heads/production'
 
     steps:
     # REQUIRED step
