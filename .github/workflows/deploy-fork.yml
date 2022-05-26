@@ -9,7 +9,7 @@ jobs:
   sync_latest_from_upstream:
     runs-on: ubuntu-latest
     name: Sync latest commits from upstream repo
-    if: github.repository != 'possible-world/test-fork-deploy'
+    # if: github.repository != 'possible-world/test-fork-deploy'
 
     steps:
     # REQUIRED step
