@@ -2,7 +2,7 @@ name: 'Upstream Sync'
 
 on:
   schedule:
-    - cron:  {{ secrets.FORK_DEPLOY_SCHEDULE }}
+    - cron:  ${{ secrets.FORK_DEPLOY_SCHEDULE }}
   workflow_dispatch:  # click the button on Github repo!
 
 jobs:
