@@ -34,7 +34,7 @@ jobs:
         target_repo_token: ${{ secrets.GITHUB_TOKEN }}
         upstream_sync_branch: production
         upstream_sync_repo: possible-world/test-fork-deploy
-        upstream_repo_access_token: ${{ secrets.UPSTREAM_REPO_SECRET }}
+        # upstream_repo_access_token: ${{ secrets.UPSTREAM_REPO_SECRET }}
         # Set test_mode true to run tests instead of the true action!!
         # test_mode: true
       
